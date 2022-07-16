@@ -31,4 +31,25 @@ public class Helper {
             }
         }
     }
+    public static boolean isFieldEmpty(JTextField textField){
+        return textField.getText().trim().isEmpty();
+    }
+    public static void showMessage(String str){
+        String msg;
+        String title;
+        switch (str){
+            case "fill":
+                msg="Please fill all fields";
+                title="Error Occured";
+                break;
+            case "done":
+                msg="Success";
+                title="Result";
+                break;
+            default:
+                msg=str;
+                title="Message";
+        }
+        JOptionPane.showMessageDialog(null,msg,title,JOptionPane.INFORMATION_MESSAGE);
+    }
 }
