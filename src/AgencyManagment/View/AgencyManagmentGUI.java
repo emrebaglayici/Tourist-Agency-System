@@ -1,5 +1,6 @@
 package AgencyManagment.View;
 
+import AgencyManagment.Helper.Config;
 import AgencyManagment.Helper.Helper;
 
 import javax.swing.*;
@@ -27,10 +28,22 @@ public class AgencyManagmentGUI extends JFrame {
     private JCheckBox ch_case;
     private JCheckBox ch_projection;
     private JTextField fld_centare;
+    private JButton btn_add;
 
     public AgencyManagmentGUI(){
         add(wrapper);
-        setSize(800,100);
-//        setLocation(Helper.screenCenterPoint());
+        setSize(500,700);
+        setLocation(Helper.screenCenterPoint("x",getSize()),Helper.screenCenterPoint("y",getSize()));
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        setTitle(Config.PROJECT_TITLE);
+        setVisible(true);
+
     }
+
+    public static void main(String[] args) {
+        AgencyManagmentGUI agencyManagmentGUI=new AgencyManagmentGUI();
+        Helper.setLayout();
+    }
+
+
 }
