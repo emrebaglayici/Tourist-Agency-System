@@ -31,6 +31,7 @@ public class AgencyManagmentGUI extends JFrame {
     private JCheckBox ch_projection;
     private JTextField fld_centare;
     private JButton btn_add;
+    private JTextField a150TextField;
 
     public AgencyManagmentGUI(){
         add(wrapper);
